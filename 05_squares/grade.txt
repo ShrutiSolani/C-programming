@@ -1,13 +1,13 @@
-Grading at Fri Aug 28 11:42:12 UTC 2020
+Grading at Fri Aug 28 11:48:36 UTC 2020
 Trying to compile your code and link with squares_test.o
 squares.c: In function ‘isAtBorder’:
 squares.c:25:30: error: lvalue required as left operand of assignment
    if(coord = offset || coord = offset + size){
                               ^
 squares.c: In function ‘squares’:
-squares.c:58:49: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
-       if((x > x_offset && x < x_offset + size2) && (y == y_offset || y == y_offset + size2 - 1) || (y > y_offset && y < y_offset + size2) && (x == x_offset || x == x_offset + size2 - 1)){
-                                                 ^
+squares.c:58:53: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+       if(((x > x_offset) && (x < x_offset + size2)) && ((y == y_offset) || (y == y_offset + size2 - 1)) || ((y > y_offset) && (y < y_offset + size2)) && ((x == x_offset) || (x == x_offset + size2 - 1))){
+                                                     ^
 cc1: all warnings being treated as errors
 Could not compile your code
 
