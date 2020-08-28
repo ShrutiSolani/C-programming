@@ -31,14 +31,14 @@ int isAtBorder(int coord, int offset, int size) {
 void squares(int size1, int x_offset, int y_offset, int size2) {
   //compute the max of size1 and (x_offset + size2).  Call this w
   if(size1 > (x_offset + size2)){
-    w = size1;
+   int w = size1;
   }
   else{
     w = x_offset + size2;
   }
   //compute the max of size1 and (y_offset + size2).  Call this h
   if(size1 > (y_offset + size2)){
-    h = size1;
+   int  h = size1;
   }
   else{
     h = y_offset + size2;
