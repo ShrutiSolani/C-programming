@@ -1,35 +1,13 @@
-Grading at Fri Aug 28 11:34:49 UTC 2020
+Grading at Fri Aug 28 11:42:12 UTC 2020
 Trying to compile your code and link with squares_test.o
 squares.c: In function ‘isAtBorder’:
 squares.c:25:30: error: lvalue required as left operand of assignment
    if(coord = offset || coord = offset + size){
                               ^
 squares.c: In function ‘squares’:
-squares.c:34:8: error: unused variable ‘w’ [-Werror=unused-variable]
-    int w = size1;
-        ^
-squares.c:37:5: error: ‘w’ undeclared (first use in this function)
-     w = x_offset + size2;
-     ^
-squares.c:37:5: note: each undeclared identifier is reported only once for each function it appears in
-squares.c:41:9: error: unused variable ‘h’ [-Werror=unused-variable]
-    int  h = size1;
-         ^
-squares.c:44:5: error: ‘h’ undeclared (first use in this function)
-     h = y_offset + size2;
-     ^
-squares.c:57:71: error: lvalue required as left operand of assignment
-       if((x > x_offset && x < x_offset + size2) && (y = y_offset || y = y_offset + size2 - 1) || (y > y_offset && y < y_offset + size2) && (x = x_offset || x = x_offset + size2 - 1)){
-                                                                       ^
-squares.c:57:159: error: lvalue required as left operand of assignment
-       if((x > x_offset && x < x_offset + size2) && (y = y_offset || y = y_offset + size2 - 1) || (y > y_offset && y < y_offset + size2) && (x = x_offset || x = x_offset + size2 - 1)){
-                                                                                                                                                               ^
-squares.c:67:29: error: lvalue required as left operand of assignment
-  if((x < size1 && (y=0 || y = size1 - 1))||(y < size1 && (x=0 || x = size1 - 1))){
-                             ^
-squares.c:67:68: error: lvalue required as left operand of assignment
-  if((x < size1 && (y=0 || y = size1 - 1))||(y < size1 && (x=0 || x = size1 - 1))){
-                                                                    ^
+squares.c:58:49: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+       if((x > x_offset && x < x_offset + size2) && (y == y_offset || y == y_offset + size2 - 1) || (y > y_offset && y < y_offset + size2) && (x == x_offset || x == x_offset + size2 - 1)){
+                                                 ^
 cc1: all warnings being treated as errors
 Could not compile your code
 
