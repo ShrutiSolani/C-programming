@@ -30,15 +30,16 @@ int isAtBorder(int coord, int offset, int size) {
 
 void squares(int size1, int x_offset, int y_offset, int size2) {
   //compute the max of size1 and (x_offset + size2).  Call this w
+  int w,h;
   if(size1 > (x_offset + size2)){
-   int w = size1;
+    w = size1;
   }
   else{
     w = x_offset + size2;
   }
   //compute the max of size1 and (y_offset + size2).  Call this h
   if(size1 > (y_offset + size2)){
-   int  h = size1;
+    h = size1;
   }
   else{
     h = y_offset + size2;
@@ -54,7 +55,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
       //    ((y is between y_offset and y_offset + size2) AND
       //     x is equal to either x_offset OR x_offset + size2 -1)
       // if so, print a *
-      if((x > x_offset && x < x_offset + size2) && (y = y_offset || y = y_offset + size2 - 1) || (y > y_offset && y < y_offset + size2) && (x = x_offset || x = x_offset + size2 - 1)){
+      if((x > x_offset && x < x_offset + size2) && (y == y_offset || y == y_offset + size2 - 1) || (y > y_offset && y < y_offset + size2) && (x == x_offset || x == x_offset + size2 - 1)){
 	printf("*");
       }
       //if not,
@@ -64,7 +65,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
       //    y is less than size1 AND (x is either 0 or size1-1)
       //if so, print a #
       else{
-	if((x < size1 && (y=0 || y = size1 - 1))||(y < size1 && (x=0 || x = size1 - 1))){
+	if((x < size1 && (y==0 || y == size1 - 1))||(y < size1 && (x=0 || x == size1 - 1))){
 	  printf("#");
 	}
 	else{
